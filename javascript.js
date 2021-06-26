@@ -1,12 +1,9 @@
 // console.log('its connected!')
 
 function computerPlay(){
-
-    let choices = ['Rock', 'Paper', 'Scissors']
-
     let randomIndex = Math.floor(Math.random() * 3);
     // console.log(randomIndex)
-    return choices[randomIndex];
+    return randomIndex;
 
 }
 
@@ -21,11 +18,11 @@ function playRound(playerSelection, computerSelection){
 
     // player chooses  ROCK here
     if(playerSelection.toLowerCase() === choices[0]){
-        if(computerSelection.toLowerCase() === choices[2]){
-            console.log(`You win! ${playerSelection} beats ${computerSelection}`)
+        if(choices[computerSelection] === choices[2]){
+            console.log(`You win! ${playerSelection} beats ${choices[computerSelection]}`)
             scores.player ++;
-        }else if(computerSelection.toLowerCase() === choices[1]){
-            console.log(`You lose! ${computerSelection} beats ${playerSelection}`)
+        }else if(choices[computerSelection] === choices[1]){
+            console.log(`You lose! ${choices[computerSelection]} beats ${playerSelection}`)
             scores.comp ++;
         }else{
             console.log('It is a draw')
@@ -34,11 +31,11 @@ function playRound(playerSelection, computerSelection){
 
     // player chooses  PAPER here
     if(playerSelection.toLowerCase() === choices[1]){
-        if(computerSelection.toLowerCase() === choices[0]){
-            console.log(`You win! ${playerSelection} beats ${computerSelection}`)
+        if(choices[computerSelection] === choices[0]){
+            console.log(`You win! ${playerSelection} beats ${choices[computerSelection]}`)
             scores.player ++;
-        }else if(computerSelection.toLowerCase() === choices[2]){
-            console.log(`You lose! ${computerSelection} beats ${playerSelection}`)
+        }else if(choices[computerSelection] === choices[2]){
+            console.log(`You lose! ${choices[computerSelection]} beats ${playerSelection}`)
             scores.comp ++;
         }else{
             console.log('It is a draw')
@@ -48,11 +45,11 @@ function playRound(playerSelection, computerSelection){
     // player chooses scissors
 
     if(playerSelection.toLowerCase() === choices[2]){
-        if(computerSelection.toLowerCase() === choices[1]){
-            console.log(`You win! ${playerSelection} beats ${computerSelection}`)
+        if(choices[computerSelection] === choices[1]){
+            console.log(`You win! ${playerSelection} beats ${choices[computerSelection]}`)
             scores.player ++;
         }else if(computerSelection.toLowerCase() === choices[0]){
-            console.log(`You lose! ${computerSelection} beats ${playerSelection}`)
+            console.log(`You lose! ${choices[computerSelection]} beats ${playerSelection}`)
             scores.comp ++;
         }else{
             console.log('It is a draw')
